@@ -1,0 +1,50 @@
+<mvt:assign name="l.settings:brohamsays" value=" 'bruuuuuuuuh' " />
+<mvt:assign name="l.settings:isay" value=" 'no i dont think so' " />
+
+&mvt:brohamsays;<br>
+&mvt:isay;
+<hr>
+
+<mvt:assign name="l.settings:fam[1]" value=" 'Kevin' " />
+<mvt:assign name="l.settings:fam[2]" value=" 'Meghan' " />
+<mvt:assign name="l.settings:fam[3]" value=" 'Elijah' " />
+<mvt:assign name="l.settings:fam[4]" value=" 'Jacob' "/>
+
+&mvt:fam[1];<br>
+&mvt:fam[2];<br>
+&mvt:fam[3];<br>
+&mvt:fam[4];<br>
+<hr>
+
+<mvt:foreach iterator="item" array="fam">
+	&mvt:item;<br>
+</mvt:foreach>
+<hr>
+
+<mvt:assign name="l.settings:name[1]:first" value=" 'Kevin' " />
+<mvt:assign name="l.settings:name[1]:last" value=" 'Fontana' " />
+
+<mvt:assign name="l.settings:name[2]:first" value=" 'Meghan' " />
+<mvt:assign name="l.settings:name[2]:last" value=" 'Fontana' " />
+
+<mvt:assign name="l.settings:name[3]:first" value=" 'Elijah' " />
+<mvt:assign name="l.settings:name[3]:last" value=" 'Fontana' " />
+
+<mvt:assign name="l.settings:name[4]:first" value=" 'Jacob' " />
+<mvt:assign name="l.settings:name[4]:last" value=" 'Fontana' " />
+
+&mvt:name[1]:first; &mvt:name[1]:last;<br>
+&mvt:name[2]:first; &mvt:name[2]:last;<br>
+&mvt:name[3]:first; &mvt:name[3]:last;<br>
+&mvt:name[4]:first; &mvt:name[4]:last;<br>
+<br>
+<mvt:foreach iterator="names" array="name">
+		<mvt:if expr="POS1 EQ 2">
+			<strong>&mvt:names:first; &mvt:names:last;</strong><br>
+		<mvt:else>
+			&mvt:names:first; &mvt:names:last;<br>
+		</mvt:if>
+</mvt:foreach>
+<hr>
+
+sweet im done
