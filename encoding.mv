@@ -1,0 +1,44 @@
+<mvt:assign name="l.settings:sample" value="'<i>Hello World.</i>'" />
+
+<h2>No Encoding</h2>
+&mvt:sample;
+<!-- output
+Hello World.
+-->
+
+<h2>Entity Encoding </h2>
+<p><small>Can help prevent cross side scripiting</small></p>
+&mvte:sample;
+<!-- output
+Can help prevent cross side scripiting
+
+<i>Hello World.</i>
+-->
+
+<h2>Attribute Encoding </h2>
+<p><small>Great for URLs</small></p>
+&mvta:sample;
+<!-- output
+Great for URLs
+
+%3Ci%3EHello+World.%3C%2Fi%3E
+
+-->
+
+<h2>JavaScript Encoding</h2>
+&mvtj:sample;
+<!-- output
+\u003Ci\u003EHello World.\u003C\/i\u003E
+-->
+
+<h2>Sluggified Encoding</h2>
+&mvts:sample;
+<!-- output
+iHello-Worldi
+-->
+
+<mvt:comment>
+<!--
+	Click the Result's "View Source" Button for more details.
+-->
+</mvt:comment>
