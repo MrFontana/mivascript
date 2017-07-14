@@ -1,9 +1,18 @@
+<h1><strong> Structures Dawwg </strong></h1>
+<hr>
+<!-- OUTPUT
+Structures Dawwg
+-->
 <mvt:assign name="l.settings:brohamsays" value=" 'bruuuuuuuuh' " />
 <mvt:assign name="l.settings:isay" value=" 'no i dont think so' " />
 
 &mvt:brohamsays;<br>
 &mvt:isay;
 <hr>
+<!-- OUTPUT
+bruuuuuuuuh
+no i dont think so
+-->
 
 <mvt:assign name="l.settings:fam[1]" value=" 'Kevin' " />
 <mvt:assign name="l.settings:fam[2]" value=" 'Meghan' " />
@@ -15,11 +24,23 @@
 &mvt:fam[3];<br>
 &mvt:fam[4];<br>
 <hr>
+<!-- OUTPUT
+Kevin
+Meghan
+Elijah
+Jacob
+-->
 
 <mvt:foreach iterator="item" array="fam">
 	&mvt:item;<br>
 </mvt:foreach>
 <hr>
+<!-- OUTPUT
+Kevin
+Meghan
+Elijah
+Jacob
+-->
 
 <mvt:assign name="l.settings:name[1]:first" value=" 'Kevin' " />
 <mvt:assign name="l.settings:name[1]:last" value=" 'Fontana' " />
@@ -38,6 +59,13 @@
 &mvt:name[3]:first; &mvt:name[3]:last;<br>
 &mvt:name[4]:first; &mvt:name[4]:last;<br>
 <br>
+<!-- OUTPUT
+Kevin Fontana
+Meghan Fontana
+Elijah Fontana
+Jacob Fontana
+-->
+
 <mvt:foreach iterator="names" array="name">
 		<mvt:if expr="POS1 EQ 2">
 			<strong>&mvt:names:first; &mvt:names:last;</strong><br>
@@ -46,5 +74,14 @@
 		</mvt:if>
 </mvt:foreach>
 <hr>
-
-sweet im done
+<!-- OUTPUT
+Kevin Fontana
+Meghan Fontana - targeted index is bold
+Elijah Fontana
+Jacob Fontana
+-->
+End of foreach
+<hr>
+<!-- OUTPUT
+End of foreach
+-->

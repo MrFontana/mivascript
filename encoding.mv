@@ -1,44 +1,39 @@
-<mvt:assign name="l.settings:sample" value="'<i>Hello World.</i>'" />
+<h1><strong>Encoding</strong></h1>
 
-<h2>No Encoding</h2>
-&mvt:sample;
-<!-- output
-Hello World.
+<h3><strong>No Encoding</strong></h3>
+<mvt:assign name="l.settings:heybro" value="'<i>Hey Bros.</i>'" />
+&mvt:heybro;
+<hr>
+<!-- OUTPUT
+Hey Bros.
 -->
 
-<h2>Entity Encoding </h2>
-<p><small>Can help prevent cross side scripiting</small></p>
-&mvte:sample;
-<!-- output
-Can help prevent cross side scripiting
-
-<i>Hello World.</i>
+<h3><strong>Entity Encoding</strong></h3>
+<p><small>Can help prevent cross side scripting</small></p>
+&mvte:heybro;
+<hr>
+<!-- OUTPUT
+<i>Hey Bros.</i>
 -->
 
-<h2>Attribute Encoding </h2>
+<h3><strong>Entity Encoding</strong></h3>
 <p><small>Great for URLs</small></p>
-&mvta:sample;
-<!-- output
-Great for URLs
-
-%3Ci%3EHello+World.%3C%2Fi%3E
-
+&mvta:heybro;
+<hr>
+<!-- OUTPUT
+%3Ci%3EHey+Bros.%3C%2Fi%3E
 -->
 
-<h2>JavaScript Encoding</h2>
-&mvtj:sample;
-<!-- output
-\u003Ci\u003EHello World.\u003C\/i\u003E
+<h3><strong>JavsScript Encoding</strong></h3>
+&mvtj:heybro;
+<hr>
+<!-- OUTPUT
+\u003Ci\u003EHey Bros.\u003C\/i\u003E
 -->
 
-<h2>Sluggified Encoding</h2>
-&mvts:sample;
-<!-- output
-iHello-Worldi
+<h3><strong>Sluggified Encoding</strong></h3>
+&mvts:heybro;
+<hr>
+<!-- OUTPUT
+iHey-Brosi
 -->
-
-<mvt:comment>
-<!--
-	Click the Result's "View Source" Button for more details.
--->
-</mvt:comment>
