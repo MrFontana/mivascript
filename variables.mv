@@ -1,0 +1,15 @@
+<h3><strong>Global Variables</strong></h3>
+<mvt:assign name="g.foo" value=" 'bar' " />
+g.foo is, "&mvt:global:foo;"<br/>
+	<mvt:if expr="g.foo EQ 'bar' ">
+		g.foo EQ 'bar' is true!<br/>
+	</mvt:if>
+<hr>
+
+<h3><strong>Without l.settings</strong></h3>
+<mvt:assign name="l.foo" value=" 'bar' " />
+l.foo is, "&mvt:foo;"<br/>
+	<mvt:if expr="l.foo EQ 'bar' ">
+		l.foo EQ 'bar' is true!<br/>
+	</mvt:if>
+<hr>
