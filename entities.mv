@@ -1,0 +1,35 @@
+<h1><strong>Entities</h1></strong>
+
+<mvt:assign name="l.settings:store:name" value=" 'Miva Examples' "/>
+
+<h3><strong>Entity</strong></h3>
+<p>Outputs variables to the page.</p>
+Example: &mvt:store:name;
+<hr>
+
+<h3><strong>Variable</strong></h3>
+<p>Is used to store and retreive information. Also, allows you to program logic</p>
+Example: l.settings:store:name
+<hr>
+
+<h3><strong>This condition will not work</strong></h3>
+<mvt:comment>
+	<mvt:if expr="&mvt:store:name; EQ 'test' ">
+		This does not work. Compile Error
+	</mvt:if>
+</mvt:comment>
+<hr>
+
+<h3><strong>This condition will work</h3></strong>
+<mvt:if expr="l.settings:store:name EQ 'MVT Fiddle' ">
+	<p>This does work ((in practice on the actual jsfiddle</p>
+</mvt:if>
+<hr>
+
+<h3><strong>This will output to the page</h3></strong>
+<p>Welcome to &mvt:store:name;!</p>
+<hr>
+
+
+<h3><strong>This will not output to the page</h3></strong>
+</p>Welcome to l.settings:store:name;</p>
